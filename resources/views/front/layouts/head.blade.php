@@ -58,20 +58,17 @@
        <div class="profile">
            <div class="profile-name">
                <span class="name">ERAY KALKAN</span><br>
-               <span class="job">Web Geliştirici</span>
+               <span class="job">Yazılım Geliştirici</span>
            </div>
            <figure class="profile-image">
                <img src="{{asset('assets/images/pp.jpg')}}" alt="">
            </figure> 
            <ul class="profile-information">
                <li></li>
-               <li><p><span>İsim:</span> Eray KALKAN</p></li>
-               <li><p><span>Meslek:</span> Web Geliştirici</p></li>
                <li><p><span>Email:</span> eray@eraykalkan.com.tr</p></li>
+               <li><p><span>Telegram:</span> @byteptr</p></li>
            </ul>
-           <div class="col-md-12">
-               <button class="site-btn icon">Download Cv <i class="fa fa-download" aria-hidden="true"></i></button>
-           </div>
+          
        </div>
    </div>
    
