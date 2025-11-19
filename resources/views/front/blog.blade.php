@@ -12,15 +12,17 @@
                 <!-- a blog -->
                 @foreach ($blog as $bl)
                 <div class="cbp-item">
-                    <a href="{{route('blogdetail',$bl->slug)}}" class="blog-box">
-                        <div class="blog-box-info">
-                            <h2 class="title">{{$bl->title}}</h2>
-                            <p class="little-text">
-                                @php echo Str::substr($bl->description,0,20) @endphp
-                            </p>
-                        </div>
-                        
-                    </a>
+                    <div class="cbp-item-wrapper">
+                        <a href="{{route('blogdetail',$bl->slug)}}" class="blog-box">
+                            <div class="blog-box-info">
+                                <h2 class="title">{{$bl->title}}</h2>
+                                <p class="little-text">
+                                    {{ Str::limit(trim(html_entity_decode(strip_tags($bl->description), ENT_QUOTES, 'UTF-8')), 20) }}
+                                </p>
+                            </div>
+                            
+                        </a>
+                    </div>
                 </div>
                 @endforeach
             </div>

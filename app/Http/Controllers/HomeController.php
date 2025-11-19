@@ -14,13 +14,13 @@ class HomeController extends Controller
         $about = DB::table('abouts')->first();
         $service = DB::table('services')->get();
         $skills = DB::table('skills')->get();
-        $blog = DB::table('blogs')->get();
+        $blog = DB::table('blogs')->orderBy('id', 'desc')->get();
         return view('front.home',compact('about','service','skills'));
     }
 
     public function blog()
     {
-        $blog = DB::table('blogs')->get();
+        $blog = DB::table('blogs')->orderBy('id', 'desc')->get();
         return view('front.blog',compact('blog'));
     }
 

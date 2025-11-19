@@ -29,7 +29,9 @@ class BlogController extends Controller
         $service = DB::table('blogs')->insert([
                 'title' => $request->input('title'),
                 'slug' => Str::slug($request->title,'-'),
-                'description' => $request->input('editor1')
+                'description' => $request->input('editor1'),
+                'created_at' => now(),
+                'updated_at' => now()
         ]);
 
         toastr()->success('Ekleme işlemi başarılı!');

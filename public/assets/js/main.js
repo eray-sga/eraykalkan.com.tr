@@ -108,6 +108,7 @@ $(document).ready(function () {
     $('#grid-blog').cubeportfolio({
         layoutMode: 'grid',
         gridAdjustment: 'responsive',
+        defaultFilter: '*',
         gapVertical: 0,
         gapHorizontal: 0,
         mediaQueries: [{
